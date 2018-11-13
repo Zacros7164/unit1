@@ -1,0 +1,8 @@
+    1  whoami
+    2  which zsh
+    3  clear
+    4  cd ~
+    5  cd Development/11-18\ Immersive/unit1
+    6  LS
+    7  git init
+    8  hitory > history.txt
