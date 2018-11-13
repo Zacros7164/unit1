@@ -1,0 +1,6 @@
+CLI Basics exercise
+
+Find 3 common Linux command by we haven't used (by Googling) and add a note about it to your the file.
+1. rmdir = Remove (empty) Directory, it is the opposite of mkdir. but will not remove a directory that has files in it. 
+2. locate = used to locate a file within the OS, case sesitive unless you use -i option
+3. grep = search files for a specific string or pattern of characters

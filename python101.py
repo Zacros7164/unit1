@@ -71,11 +71,38 @@
 # print 2**3
 # just like concatenation the multiplication symbol can be used to replicate a string multiple times
 # a string and a * and a number = give me X strings 
-print "-" * 20
+# print "-" * 20
 
 # python does not have a simple incrementer
-num = 1;
+# num = 1;
 # num ++
-num += 1;
+# num += 1;
 
+# Input 
+# python 2 = raw_input
+# python 3 = input
+# name = raw_input("What is your name? ")
+# print type(name)
 
+# Conditionals
+# a single = sign, means set the left to whatever is on the right
+# 2 = signs, means compare what's on the left to whatever is on the right
+
+print 2 == 2
+print 2 == 1
+print 2 == "2"
+secretNumber = 5;
+if(secretNumber == 3):
+    print "Secret number is 3";
+else:
+    print "Secret number is not 3";
+
+game_on = True;
+i = 0;
+while(game_on):
+    i += 1
+    if(i == 10):
+        game_on = False
+    else:
+        print "Game on!"
+print "Loop exited!"
