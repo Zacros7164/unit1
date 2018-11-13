@@ -31,5 +31,17 @@ print theBestClass
 # - Dictionaries = a variable of variables
 # - Objects - super dictionaries 
 
-# Primitvie Data types = String, Numbers, Booleans (like base elements)
+# Primitvie Data types = String, Numbers, Booleans (like base elements hydrogen, oxygen, etc)
 # Abstract data types = List, Dictionaries, Objects (things made up of primitive dtata types, like H2O OR NaCl)
+month = "November"
+print type(month)
+date = 13
+print type(date)
+dateAsfloat = 13.0
+print type(dateAsfloat)
+aBool = True 
+print type(aBool)
+aList = []
+print type(aList)
+aDictionary = {}
+print type(aDictionary)
