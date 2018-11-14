@@ -4,3 +4,11 @@ Find 3 common Linux command by we haven't used (by Googling) and add a note abou
 1. rmdir = Remove (empty) Directory, it is the opposite of mkdir. but will not remove a directory that has files in it. 
 2. locate = used to locate a file within the OS, case sesitive unless you use -i option
 3. grep = search files for a specific string or pattern of characters
+4. find = searches file structure for a file or folder
+5. - i = case insensitive
+6. say = computer will say your text input
+7. sed = search a string for a substring and replace. (find and replace from word)
+8. top = activity monitor, built into Linux, linux task manager
+9. htop = jut like top but fancy color coding
+10. top -o cpu = will sort by cpu usage
+11. 

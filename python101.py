@@ -22,7 +22,7 @@
 
 # # Data types
 # # - Programming languages see different types of varibles differently
-# # - string = English stuff.
+# # - string = English stuff.touch
 # # - Number = something with a number or a - or e for standard notation.
 # #     - floats = decimal point in the number
 # #     - integers = whole number (no decimal point)
