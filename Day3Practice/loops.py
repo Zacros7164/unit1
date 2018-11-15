@@ -114,7 +114,7 @@
 # 10 X 10 = 100
 
 # for i in range(1, 11):
-#     for j in range(1,3):
+#     for j in range(1,11):
 #         answer = i*j
 #         print "%i x %i = %i" % (i, j, answer)
 

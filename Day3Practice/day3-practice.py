@@ -23,22 +23,17 @@
 
 # ====LONG VOWELS====
 
-# userString = raw_input("Give me a word. ")
-# print userString
-# stringAsAList = list(userString)
-# stringLength = len(stringAsAList)
-# lowerCaseVowel = ["a", "e", "i", "o", "u"]
-# for i in range(0, stringLength):
-#     print stringAsAList[i]
-#     for j in lowerCaseVowel:
-#         if i == j:
-#             print "Sweet!"
-# print ''.join(stringAsAList)
-
-
+word = raw_input("Please give me a word. ")
+print word
+newWord= ""
+wordList = list(word)
+print wordList
+vowel = "AEIOUaeiou"
+vowelAsList = list(vowel)
+for i in wordList
 
 # ====CAESAR CIPHER====
 
-alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-encryptedMessage = "lbh zhfg hayrnea jung lbh unir yrnearq"
+# alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+# encryptedMessage = "lbh zhfg hayrnea jung lbh unir yrnearq"
 
