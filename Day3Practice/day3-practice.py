@@ -13,10 +13,10 @@
 
 # myParagraph = "Sometime we can feel a bit dull in the morning and we need to produce our own sunshine energy."
 # leetSpeak = (("A", "4"), ("E", "3"), ("G", "6"), ("I", "1"), ("O", "0"), ("S", "5"), ("T", "7"),("a", "4"), ("e", "3"), ("g", "6"),("i", "1"), ("o", "0"),("s", "5"), ("t", "7"))
-# # myParagraphUpper = myParagraph.upper()
-# leetParagraph = myParagraph
+# myParagraphUpper = myParagraph.upper()
+# leetParagraph = myParagraphUpper
 # for i, j in leetSpeak:
-#     leetParagraph = myParagraph.replace(i, j)
+#     leetParagraph = myParagraphUpper.replace(i, j)
 
 # print leetParagraph
 
