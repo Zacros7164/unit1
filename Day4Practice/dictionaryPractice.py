@@ -66,20 +66,22 @@
 # >>> letter_histogram('banana')
 # {'a': 3, 'b': 1, 'n': 2}
 # In this exercise, are you using dynamic keys or fixed keys?
-# # first gets word from user
-# impWord = raw_input("Please give me a word. ") 
-# # init empty dictionary
-# histogram_dict = {}
-# # iterates through word for each character
-# for i in impWord:
-#     # if i is already in histogram_dict, add one to the value for key i
-#     if i in histogram_dict:
-#         histogram_dict[i] += 1
-#     # if i is not already in histogram_dict, add the key i to the dictionary with a value of 1
-#     else:
-#         histogram_dict[i] = 1
-# # print the dictionary out
-# print histogram_dict
+# first gets word from user
+impWord = raw_input("Please give me a word. ") 
+# init empty dictionary
+histogram_dict = {}
+# iterates through word for each character
+for i in impWord:
+    # if i is already in histogram_dict, add one to the value for key i
+    if i in histogram_dict:
+        histogram_dict[i] += 1
+    # if i is not already in histogram_dict, add the key i to the dictionary with a value of 1
+    else:
+        histogram_dict[i] = 1
+# print the dictionary out
+print histogram_dict
+
+
    
 # Word Summary
 # Write a word_histogram function that takes a paragraph of text as its input, and returns a dictionary containing the tally of how many times each letter in the alphabet was used in the text. For example:
@@ -105,24 +107,33 @@
 # Bonus Challenge
 # Given a histogram tally (one returned from either letter_histogram or word_summary), print the top 3 words or letters.
 
+## first gets word from user
+# impWord = raw_input("Please give me a word. ") 
+# histogram_dict = {}
+# for i in impWord:
+#     if i in histogram_dict:
+#         histogram_dict[i] += 1
+#     else:
+#         histogram_dict[i] = 1
+# print histogram_dict
+
 # Super Bonus Challenge
 # Given a list (example below), create a function that takes the list and returns a dictionary that has a key "one," "two," "three," and so on. Assign the value for each key to be a list of however many times a value shows up in the list. 
 
-list1 = [1,45,65,4,45,"Jim",1,"Jim",3,4,1,1,True,3,45,4,1,"The Beetles",9]
-countHistogram = {}
-for i in list1:
-    if i in countHistogram:
-        countHistogram[i] += 1
-    else:
-        countHistogram[i] = 1
-print countHistogram
-# The output shoudl be:
+# list1 = [1,45,65,4,45,"Jim",1,"Jim",3,4,1,1,True,3,45,4,1,"The Beetles",9]
+# sortedList1 = sorted(list1)
+# print sortedList1
+# final_dictionary = {}
+# for i in sortedList1:
+#     if i in 
+
+
 
 # final_dictionary = {
 #     'one': ["The Beetles",9,True,65]
 #     'two': ["Jim",3]
 #     'three': [45,4]
-#     'five': [1]
+#     'five': [1] 
 # }
 # Ultra Bonus Challenge
 # Do the super bonus with multiple lists.
