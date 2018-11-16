@@ -75,7 +75,7 @@
 # vSet = set(vowels)
 # # print vSet
 # rendWord = []
-impWord = raw_input("Please enter a word. ")
+# impWord = raw_input("Please enter a word. ")
 # for letter in impWord:
 #     if letter in vSet:
 #         numVal += 1
@@ -88,22 +88,22 @@ impWord = raw_input("Please enter a word. ")
 # wordRendered = "".join(rendWord)
 # print wordRendered
 
-vowelDict = {
-    "a": "aaaaa",
-    "e": "eeeee",
-    "i": "iiiii",
-    "o": "ooooo",
-    "u": "uuuuu"
-}
-longVowelStr = ""
-for i in range(0,len(impWord)):
-    currentLetter = impWord[i]
-    nextLetter = impWord[i +1]
-    if(currentLetter == nextLetter) and (i != len(impWord)-1):
-        if(currentLetter in vowelDict):
-            currentLetter = vowelDict[currentLetter]
-        longVowelStr += currentLetter
-print longVowelStr    
+# vowelDict = {
+#     "a": "aaaaa",
+#     "e": "eeeee",
+#     "i": "iiiii",
+#     "o": "ooooo",
+#     "u": "uuuuu"
+# }
+# longVowelStr = ""
+# for i in range(0,len(impWord)):
+#     currentLetter = impWord[i]
+#     nextLetter = impWord[i +1]
+#     if(currentLetter == nextLetter) and (i != len(impWord)-1):
+#         if(currentLetter in vowelDict):
+#             currentLetter = vowelDict[currentLetter]
+#         longVowelStr += currentLetter
+# print longVowelStr    
 
 # Caesar Cipher
 # Given a string, print the Caesar Cipher (or ROT13) of that string. What is Caesar Cipher? http://practicalcryptography.com/ciphers/caesar-cipher/
