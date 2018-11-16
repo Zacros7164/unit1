@@ -66,20 +66,20 @@
 # >>> letter_histogram('banana')
 # {'a': 3, 'b': 1, 'n': 2}
 # In this exercise, are you using dynamic keys or fixed keys?
-# # # first gets word from user
-# impWord = raw_input("Please give me a word. ").lower()
-# # init empty dictionary
-# histogram_dict = {}
-# # iterates through word for each character
-# for i in impWord:
-#     # if i is already in histogram_dict, add one to the value for key i
-#     if i in histogram_dict:
-#         histogram_dict[i] += 1
-#     # if i is not already in histogram_dict, add the key i to the dictionary with a value of 1
-#     else:
-#         histogram_dict[i] = 1
-# # print the dictionary out
-# print histogram_dict
+# # first gets word from user
+impWord = raw_input("Please give me a word. ").lower()
+# init empty dictionary
+histogram_dict = {}
+# iterates through word for each character
+for i in impWord:
+    # if i is already in histogram_dict, add one to the value for key i
+    if i in histogram_dict:
+        histogram_dict[i] += 1
+    # if i is not already in histogram_dict, add the key i to the dictionary with a value of 1
+    else:
+        histogram_dict[i] = 1
+# print the dictionary out
+print histogram_dict
 
 
    
