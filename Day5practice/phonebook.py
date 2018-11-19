@@ -18,8 +18,6 @@ while(appOpen):
     userInput = raw_input("\n What do you want to do? (1-6) ")
     if userInput == "1":
         option1 = raw_input("\n Who do you want to search for? ").lower().capitalize()
-        # option1 = option1.lower()
-        # option1 = option1.capitalize()
         if option1 in appDict:
             print "\n %s's phone number is %s.\n" % (option1, appDict[option1])
         else:
@@ -42,7 +40,8 @@ while(appOpen):
         else:
             continue
     if userInput == "4":
-        print appDict
+        for key, value in appDict.items():
+            print "\nFound entry for %s: %s" % (key, value)
     if userInput == "5":
         option5 = raw_input("\nWho do you want to search for? ").lower().capitalize()
         if option5 in appDict:
