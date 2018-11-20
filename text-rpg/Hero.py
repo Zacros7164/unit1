@@ -1,9 +1,8 @@
-import random
 class Hero(object):
-    def __init__(self,name):
+    def __init__(self,name, power = 5):
         self.name = name
         self.health = 10
-        self.power = random.randint(5,10)
+        self.power = power
 
-theHero = Hero("Link")
-print theHero.power
+    def cheer_hero(self):
+        print "Welcome, brave %s" % (self.name)
