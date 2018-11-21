@@ -1,7 +1,8 @@
 # 1. include pygame
 # we needed pip to get this for us, because python doesn't ship with it
 import pygame
-
+from Hero import Hero
+from bad_guy import BadGuy
 # 2. initialize pygame
 # Why do we need to do this? because they told us to
 pygame.init()
@@ -12,16 +13,19 @@ pygame_screen = pygame.display.set_mode(screen_size)
 # set the title of the window that opens...
 pygame.display.set_caption('Archer')
 
+theHero = Hero()
+bad_guy = BadGuy()
+
 # ===========VARIABLES FOR OUR GAME==========
 background_image = pygame.image.load('background.png')
 hero_image = pygame.image.load('hero.png')
 monster_image = pygame.image.load('monster.png')
 goblin_image = pygame.image.load('goblin.png')
 arrow_image = pygame.image.load('arrow.png')
-heroLoc = {
-    'x': 0,
-    'y': 0
-}
+# heroLoc = {
+#     'x': 0,
+#     'y': 0
+# }
 # ==============MAIN GAME LOOP==============
 gameOn = True
 # the loop will run as long as our bool is True
@@ -36,18 +40,33 @@ while gameOn:
         elif event.type == pygame.KEYDOWN:
             # the user pressed a key
             print event.key
-            if event.key == 275 and heroLoc['x'] < 480:
-                # the user pressed the right arrow, AND isn't off the screen! Move our dude right
-                heroLoc['x'] += 10
-            if event.key == 276 and heroLoc['x'] > 0:
+            if event.key == 275:
+                # the user pressed the right arrow, AND isn't off the screen! Move the guy right
+                # theHero.x += 10
+                theHero.should_move('right')
+            elif event.key == 276:
                 # the user pressed the left arrow , AND isn't off the screen! Move the guy left
-                heroLoc['x'] -= 10
-            if event.key == 273 and heroLoc['y'] > 0:
+                # theHero.x -= 10
+                theHero.should_move('left')
+            if event.key == 273:
                 # the user pressed the up arrow, AND isn't off the screen! Move the guy up
-                heroLoc['y'] -= 10
-            if event.key == 274 and heroLoc['y'] < 512:
+                # theHero.y -= 10
+                theHero.should_move('up')
+            elif event.key == 274:
                 # the user pressed the down arrow, AND isn't off the screen! Move the guy down
-                heroLoc['y'] += 10
+                # theHero.y += 10
+                theHero.should_move('down')
+        elif event.type == pygame.KEYUP:
+            # the user released a key
+            print event.key
+            if event.key == 275:
+                theHero.should_move('right', False)
+            elif event.key == 276:
+                theHero.should_move('left', False)
+            if event.key == 273:
+                theHero.should_move('up', False)
+            elif event.key == 274:
+                theHero.should_move('down', False)
     # ==========DRAW STUFF==========
     # We use blit to draw on the screen
     # blit = block image transfer
@@ -56,5 +75,8 @@ while gameOn:
     # 2. where to draw it
     # in the docs.... SURFACE(their name) = our "pygame_screen"
     pygame_screen.blit(background_image,[0,0])
-    pygame_screen.blit(hero_image, [heroLoc['x'], heroLoc['y']])
+    theHero.draw_me()
+    bad_guy.update_me(theHero)
+    pygame_screen.blit(hero_image, [theHero.x, theHero.y])
+    pygame_screen.blit(monster_image, [bad_guy.x, bad_guy.y])
     pygame.display.flip()
