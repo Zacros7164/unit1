@@ -1,13 +1,13 @@
 import random
 
 
-class Goblin(object):
+class Vampire(object):
     def __init__(self):
-        randomPower = random.randint(2,5)
-        randomHealth = random.randint(6,9)
-        randomGold = random.randint(1,5)
-        randomSpeed = random.randint(2,5)
-        self.name = "goblin"
+        randomPower = random.randint(4,7)
+        randomHealth = random.randint(10,15)
+        randomGold = random.randint(4,8)
+        randomSpeed = random.randint(6,9)
+        self.name = "vampire"
         self.health = randomHealth
         self.power = randomPower
         self.gold = randomGold
@@ -29,3 +29,8 @@ class Goblin(object):
             return self.gold
         else:
             return self.gold
+
+# vampire = Vampire()
+# print vampire.gold
+# vampire.drop_gold()
+# print vampire.gold
