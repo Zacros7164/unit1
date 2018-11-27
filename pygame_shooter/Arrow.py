@@ -9,8 +9,8 @@ class Arrow(Sprite):
         self.speed = 25
         self.rect = pygame.Rect(0,0,64,64)
         self.rect.centerx = self.x
-        self.rect.centery = self.y
+        self.rect.top = self.y
     def update_me(self):
         self.x += self.speed
         self.rect.x = self.x
-        
+        self.rect.y = self.y

@@ -8,9 +8,9 @@ class BadGuy(Sprite):
         self.x = 200
         self.y = 200
         self.speed = 4
-        self.rect = pygame.Rect(0,0,30,32)
+        self.rect = pygame.Rect(0,0,32,32)
         self.rect.centerx = self.x
-        self.rect.centery = self.y
+        self.rect.top = self.y
     def update_me(self, theHero):
         dx = self.x - theHero.x
         dy = self.x - theHero.y

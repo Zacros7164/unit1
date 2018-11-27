@@ -1,21 +1,14 @@
 import random
+# this is a subclass of Character
+# so import Character
+from Character import Character
 
 
-class Vampire(object):
+class Vampire(Character):
     def __init__(self):
-        randomPower = random.randint(4,7)
-        randomHealth = random.randint(10,15)
-        randomGold = random.randint(4,8)
-        randomSpeed = random.randint(6,9)
-        self.name = "vampire"
-        self.health = randomHealth
-        self.power = randomPower
+        super(Vampire,self)__init__("Vampire", 15, 4)
         self.gold = randomGold
         self.speed = randomSpeed
-    def take_damage(self, amount_of_damage):
-        self.health -= amount_of_damage
-    def is_alive(self):
-        return self.health > 0
     def drop_gold(self):
         dice_roll = random.randint(1,6)
         if dice_roll == 5:

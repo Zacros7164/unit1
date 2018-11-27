@@ -111,6 +111,8 @@ while gameOn:
     # 3. if something in group 1 hits something in group 2, should i remove it from group 1? true = yes
     # 4. if something in group 2 hits something in group 1, should I remove it from group 2? false = no
     arrow_hit= groupcollide(arrows,bad_guys,True,True)
+    if arrow_hit:
+        bad_guys.add(BadGuy())
     # move the bad guys
     for bad_guy in bad_guys:
         bad_guy.update_me(theHero)

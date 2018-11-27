@@ -1,4 +1,4 @@
-import pygame
+# import pygame
 
 class Hero(object):
     # classes always contain 2 parts
@@ -26,11 +26,11 @@ class Hero(object):
             if self.x < 480:
                 self.x += self.speed
         elif self.should_move_left:
-            if self.x > 32:
+            if self.x > 0:
                 self.x -= self.speed
         if self.should_move_down:
-            if self.y < 420:
+            if self.y < 445:
                 self.y += self.speed
         elif self.should_move_up:
-            if self.y > 32:
+            if self.y > 0:
                 self.y -= self.speed
