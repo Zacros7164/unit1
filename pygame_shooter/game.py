@@ -37,11 +37,8 @@ background_image = pygame.image.load('background.png')
 hero_image = pygame.image.load('hero.png')
 monster_image = pygame.image.load('monster.png')
 goblin_image = pygame.image.load('goblin.png')
-arrow_image = pygame.image.load('arrow.png')
-# heroLoc = {
-#     'x': 0,
-#     'y': 0
-# }
+# arrow_image = pygame.image.load('arrow.png')
+
 
 bg_music = pygame.mixer.Sound('faf.wav')
 bg_music.play()
@@ -49,8 +46,12 @@ bg_music.play()
 # ==============MAIN GAME LOOP==============
 gameOn = True
 gameStart = False
+tick = 0
 # the loop will run as long as our bool is True
 while gameOn:
+    tick += 1
+    if(tick % 90) == 0:
+        bad_guys.add(BadGuy())
     # we are in the game loop from here on out
     # 5. Listen for eventsamd quit if the user clicks the 'x'
     # ==========EVENT CHECKER==========
@@ -120,7 +121,7 @@ while gameOn:
         # Draw the arrows
         for arrow in arrows:
             arrow.update_me()
-            pygame_screen.blit(arrow_image, [arrow.x, arrow.y])
+            pygame_screen.blit(arrow.img, [arrow.x, arrow.y])
 
         # inside ()
         # 1. group 1
