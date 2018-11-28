@@ -1,12 +1,15 @@
 import pygame
 from pygame.sprite import Sprite
+import random
+randX= random.randint(915,925)
+randY = random.randint(185,400)
 
 class Archer(Sprite):
     def __init__(self):
         super(Archer, self).__init__
         self.health = 10
-        self.x = 920
-        self.y = 200
+        self.x = randX
+        self.y = randY
         self.yspeed = 10
         self.xspeed = 8
         self.should_move_down = False
