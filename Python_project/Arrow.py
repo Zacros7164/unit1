@@ -12,11 +12,11 @@ class Arrow(Sprite):
         self.rect.centerx = self.x
         self.rect.top = self.y
         self.arrows = []
-        self.arrows.append(arrow_image)
-        self.arrows.append(arrow_image)
-        self.arrows.append(arrow_image)
-        self.arrows.append(arrow_image)
-        self.img = self.arrows[0]
+        self.arrows.append(arrow_images[0])
+        self.arrows.append(arrow_images[1])
+        self.arrows.append(arrow_images[2])
+        self.arrows.append(arrow_images[3])
+        self.image = self.arrows[0]
         self.cur_arrow = 0
         self.power = 5
 
@@ -25,9 +25,10 @@ class Arrow(Sprite):
 
     def update_me(self):
         self.cur_arrow += 1
+        # print self.cur_arrow
         if self.cur_arrow == 4:
             self.cur_arrow = 0
-        self.img = self.arrows[self.cur_arrow]
+        self.image = self.arrows[self.cur_arrow]
         self.x += self.speed
         self.rect.x = self.x
         self.rect.y = self.y

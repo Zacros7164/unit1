@@ -37,6 +37,7 @@ while gameOn:
             elif event.key == 274:
                 player.should_move('down')
             elif event.key == 32:
+                player.attack()
                 new_arrow = Arrow(player)
                 arrows.add(new_arrow)
 
@@ -57,10 +58,10 @@ while gameOn:
     bg_music.play()
     for wolf in monsters:
         wolf.draw_me()
-        pygame_screen.blit(wolf.img, [wolf.x,wolf.y])
+        pygame_screen.blit(wolf.image, [wolf.x,wolf.y])
     for arrow in arrows:
         arrow.update_me()
-        pygame_screen.blit(arrow.img, [arrow.x, arrow.y])
+        pygame_screen.blit(arrow.image, [arrow.x, arrow.y])
     arrow_hit= groupcollide(arrows,monsters,True,True)
     if arrow_hit:
         monsters.add(Wolf())
@@ -70,7 +71,7 @@ while gameOn:
         # for wolf in monsters:
         for attack_wolf in monster_hit:
             attack_wolf.attack()
-            if wolf.img == wolf_images[0]:
+            if wolf.image == wolf_images[0]:
                 print "hello"
                 wall.take_damage(wolf.power)
                 print wall.health

@@ -11,7 +11,7 @@ class Monster(Sprite):
         randY = random.randint(185,400)
         self.y = randY
         self.x = 0
-        self.speed = 15
+        self.speed = 8
         self.power = 5
 
 

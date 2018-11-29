@@ -14,7 +14,7 @@ class Wall(Sprite):
         self.rect.x = self.x
         self.rect.y = self.y
         # self.img.fill(white)
-        self.health = 50000
+        self.health = 3500
     def take_damage(self,monster_power):
         self.health -= monster_power
         # time.sleep(1)

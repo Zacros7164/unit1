@@ -3,6 +3,7 @@ from pygame.sprite import Sprite
 import random
 randX= random.randint(915,925)
 randY = random.randint(185,400)
+from SETTINGS import *
 
 class Archer(Sprite):
     def __init__(self):
@@ -16,6 +17,9 @@ class Archer(Sprite):
         self.should_move_up = False
         self.should_move_left = False
         self.should_move_right = False
+        self.cur_img = 0
+        self.image = archer_images[0]
+
 
     def should_move(self,direction,start = True):
         if direction == 'right':
@@ -40,3 +44,9 @@ class Archer(Sprite):
         elif self.should_move_up:
             if self.y > 185:
                 self.y -= self.yspeed
+
+    # def attack(self):
+    #     self.image = archer_images[self.cur_img]
+    #     self.cur_img += 1
+    #     if self.cur_img == (len(archer_images) - 1):
+    #         self.cur_img = 0
